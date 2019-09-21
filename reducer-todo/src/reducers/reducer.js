@@ -2,27 +2,17 @@ import React, { useReducer } from 'react';
 
 const initialState = 
     { 
-        item: 'Lear about reducers',
+        item: 'Learn about reducers',
         completed: false,
-        id:  Date().getTime()
+        id:  420000
     }
 const reducer = (state, action) => {
     switch(action.type)
     {
         case 'addTask':
-            return
-            {
-                item: action.payload;
-                completed: false;
-                id: Date().getTime();
-            };
+            return{ item: action.payload };
         case 'taskComplete':
-            return 
-            {
-                item: state.item;
-                completed: action.payload;
-                id: state.id;
-            };
+            return { completed: action.payload };
         default: return state;
     }
     /*

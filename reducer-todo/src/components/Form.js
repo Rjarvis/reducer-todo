@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import dom from 'react-dom';
-
+import ReactDOM from 'react-dom';
+import Reducer from '../reducers/reducer.js';
 
 
 class TODOForm extends React.Component {
@@ -28,7 +28,7 @@ class TODOForm extends React.Component {
                    TODO:
                    <input type="text" todo="todo" />
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value={Reducer()} />
             </form>
         );
     }    
