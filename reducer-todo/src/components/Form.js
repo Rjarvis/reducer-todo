@@ -33,3 +33,5 @@ class TODOForm extends React.Component {
         );
     }    
 }
+
+export default TODOForm;
