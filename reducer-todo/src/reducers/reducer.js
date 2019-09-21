@@ -35,7 +35,7 @@ const reducer = (state, action) => {
     }*/
 }
 
-function Reducer()
+function Reducer(props)
 {
     const [state, dispatch] = useReducer(reducer, initialState)
     return(

@@ -18,6 +18,7 @@ class TODOForm extends React.Component {
 
    handleSubmit(event) {
        alert('Submit success' + this.state.value);
+       Reducer(this.state.value);
        event.preventDefault();
    }
 
@@ -28,7 +29,7 @@ class TODOForm extends React.Component {
                    TODO:
                    <input type="text" todo="todo" />
                 </label>
-                <input type="submit" value={Reducer()} />
+                <input type="submit" value="Submit" />
             </form>
         );
     }    
