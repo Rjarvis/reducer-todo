@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 
 const initialState = 
     { 
@@ -45,5 +45,17 @@ const reducer = (state, action) => {
     }*/
 }
 
+function Reducer()
+{
+    const [state, dispatch] = useReducer(reducer, initialState)
+    return(
+        <>
+        <div className="addTask">Task: {state.item}</div>
+        <button onClick={() => dispatch({ type: 'addTask'})}>Add Task</button>
+        <button onClick={() => dispatch({ type: 'taskComplete'})}>Completed</button>
+        </>
+    )
+}
 
-export default reducer(initialState);
+
+export default Reducer;
